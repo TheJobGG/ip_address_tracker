@@ -1,0 +1,15 @@
+:root {
+    /* Colors */
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --darkgray: hsl(0, 0%, 59%);
+
+    /* Input */
+    --font-size: 18px;
+
+    /* Typography */
+    --rubik: 'Rubik', sans-serif;
+}
+
+*{
+    font-family: var(--rubik);
+}
