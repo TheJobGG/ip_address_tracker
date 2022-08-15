@@ -1,0 +1,35 @@
+#bg-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#pattern-bg,
+#map-image {
+    display: block;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+#pattern-bg {
+    height: 40vh;
+}
+
+.map-container {
+    max-height: 60vh;
+    min-height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#map-image{
+    -ms-transform: scale(3);
+    -moz-transform: scale(3);
+    -webkit-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
+}

@@ -1,15 +1,25 @@
 :root {
     /* Colors */
     --very-dark-gray: hsl(0, 0%, 17%);
-    --darkgray: hsl(0, 0%, 59%);
+    --dark-gray: hsl(0, 0%, 59%);
 
     /* Input */
     --font-size: 18px;
 
     /* Typography */
     --rubik: 'Rubik', sans-serif;
+    /* Weights: 400, 500, 700 */
+
+    /* Horizontal padding */
+    --padding-horizontal-mobile: 25px;
 }
 
 *{
+    margin: 0;
+    padding: 0;
     font-family: var(--rubik);
+}
+
+body{
+    padding: 0 var(--padding-horizontal-mobile);
 }

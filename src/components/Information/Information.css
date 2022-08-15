@@ -1,0 +1,24 @@
+@import'../../css/style-guide.css';
+
+#information {
+    margin: 1em 0;
+    background-color: white;
+    text-align: center;
+    padding: 1em 1em;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#information>.data >p:first-child {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#information>.data >p:last-child{
+    color: var(--very-dark-gray);
+    margin-bottom: 1em;
+}

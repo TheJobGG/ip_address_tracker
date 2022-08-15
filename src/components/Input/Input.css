@@ -1,0 +1,41 @@
+@import'../../css/style-guide.css';
+
+h1{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin: 1em 0;
+}
+
+#form-search{
+    display: flex;
+    gap: 0;
+    position: relative;
+}
+
+#search{
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: var(--font-size);
+}
+
+#search:focus{
+    outline: none;
+}
+
+#btn-search{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    border-style: none;
+    width: 50px;
+    background-color: black;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
