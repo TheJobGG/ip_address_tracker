@@ -6,6 +6,7 @@
     text-align: center;
     padding: 1em 1em;
     border-radius: 15px;
+    font-weight: 700;
     z-index: 2;
 }
 
@@ -14,11 +15,54 @@
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 1px;
-    font-weight: 700;
     margin-bottom: 5px;
 }
 
 #information>.data >p:last-child{
     color: var(--very-dark-gray);
     margin-bottom: 1em;
+}
+
+@media screen and (min-width: 600px) {
+    #information {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+
+    #information>.data{
+        position: relative;
+        flex-grow: 1;
+        padding-left: 2em;
+        padding-right: 1em;
+    }
+    
+    #information>.data:first-child{
+        padding-left: 0em;
+    }
+    
+    #information>.data:not(:first-child):after{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        translate: 0 -50%;
+        scale: 0.75;
+
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: var(--dark-gray);
+    }
+
+    #information>.data >p:first-child {
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    
+    #information>.data >p:last-child{
+        color: var(--very-dark-gray);
+        font-size: 1.3em;
+    }
 }

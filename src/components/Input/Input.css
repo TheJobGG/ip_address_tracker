@@ -23,6 +23,10 @@ h1{
     font-size: var(--font-size);
 }
 
+#search::placeholder{
+    color: var(--very-dark-gray);
+}
+
 #search:focus{
     outline: none;
 }
@@ -38,4 +42,20 @@ h1{
     background-color: black;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    #form-search {
+        display: flex;
+        gap: 0;
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        min-width: 300px;
+        width: 50%;
+    }
+
+    #search{
+        font-size: calc(var(--font-size) - 2px);
+    }
 }

@@ -8,7 +8,7 @@
 }
 
 #pattern-bg,
-#map-image {
+#map {
     display: block;
     width: 100vw;
     object-fit: cover;
@@ -26,10 +26,31 @@
     overflow: hidden;
 }
 
-#map-image{
+/* #map{
     -ms-transform: scale(3);
     -moz-transform: scale(3);
     -webkit-transform: scale(3);
     -o-transform: scale(3);
     transform: scale(3);
+} */
+
+@media screen and (min-width: 600px) {
+    #pattern-bg {
+        height: 30vh;
+    }
+    
+    .map-container {
+        max-height: 70vh;
+        min-height: 70vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* #map{
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    } */
 }

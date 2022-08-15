@@ -12,6 +12,7 @@
 
     /* Horizontal padding */
     --padding-horizontal-mobile: 25px;
+    --padding-horizontal-desktop: 200px;
 }
 
 *{
@@ -22,4 +23,11 @@
 
 body{
     padding: 0 var(--padding-horizontal-mobile);
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 600px) {
+    body{
+        padding: 0 var(--padding-horizontal-desktop);
+    }
 }

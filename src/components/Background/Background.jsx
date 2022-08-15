@@ -8,8 +8,9 @@ export function Background() {
     return (
         <div id="bg-container">
             <img id="pattern-bg" src={pattern} alt="Pattern background" />
-            <div className="map-container">
+            <div id="map">
                 <img id="map-image" src={mapImage} alt="Map image" />
+                
             </div>
         </div>
     );
