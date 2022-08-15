@@ -9,7 +9,7 @@ export function Input() {
             <form id="form-search">
                 <input type="text" name="search" id="search" autoComplete="off" maxLength={15} minLength={7} placeholder='Search for any IP address or domain'/>
                 <button type="submit" id="btn-search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" strokeWidth={3} d="M2 1l6 6-6 6" /></svg>
                 </button>
             </form>
         </>

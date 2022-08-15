@@ -1,0 +1,11 @@
+.leaflet-container{
+    overflow: hidden;
+    height: 60vh;
+}
+
+@media screen and (min-width: 600px) {
+    .leaflet-container{
+    overflow: hidden;
+    height: 70vh;
+}
+}

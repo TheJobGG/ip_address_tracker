@@ -1,4 +1,4 @@
-#bg-container{
+#bg-container {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,38 +19,8 @@
     height: 40vh;
 }
 
-.map-container {
-    max-height: 60vh;
-    min-height: 60vh;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* #map{
-    -ms-transform: scale(3);
-    -moz-transform: scale(3);
-    -webkit-transform: scale(3);
-    -o-transform: scale(3);
-    transform: scale(3);
-} */
-
 @media screen and (min-width: 600px) {
     #pattern-bg {
         height: 30vh;
     }
-    
-    .map-container {
-        max-height: 70vh;
-        min-height: 70vh;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    /* #map{
-        -ms-transform: scale(1);
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    } */
 }
