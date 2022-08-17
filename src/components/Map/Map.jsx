@@ -19,9 +19,6 @@ export function Map() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 
             />
-            {/* <SVGOverlay bounds={bounds}>
-                <Pointer />
-            </SVGOverlay> */}
             <Marker position={position}>
             </Marker>
             <ZoomControl position="bottomright" zoomInText="+" zoomOutText="-" />

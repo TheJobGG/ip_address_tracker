@@ -11,25 +11,24 @@ import { MapContext } from '../../services/map-context';
 
 export function Input() {
 
-    const {lat, setLat, long, setLong, UpdateMap } = useContext(MapContext);
+    const { lat, setLat, long, setLong, UpdateMap } = useContext(MapContext);
 
     const onSubmit = (e) => {
         e.preventDefault();
-        /* const ip = e.target.elements[0].value.trim(); */
+        const ip = e.target.elements[0].value.trim();
 
-        /* if(testIP(ip)){
-            const data = callAPI(ip);
+        if (testIP(ip)) {
+            const result = callAPI(ip);
             console.log('data: ', data)
-        }else{
-            return alert('Formato de IP no válido');
-        } */
 
-        const result = callAPI();
-        setLat(result.location.lat);
-        setLong(result.location.lng);
-        setTimeout(() => {
-            updateUI(result);
-        }, 100);
+            setLat(result.location.lat);
+            setLong(result.location.lng);
+            setTimeout(() => {
+                updateUI(result);
+            }, 100);
+        } else {
+            return alert('Formato de IP no válido');
+        }
     };
 
     return (
