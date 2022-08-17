@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./src/assets/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="./src/css/style-guide.css">
+  <link rel="stylesheet" href="./src/css/loader.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +26,20 @@
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+  </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
+
+<script defer src="./src/services/loader.js"></script>
 
 </html>

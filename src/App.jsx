@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import React from 'react';
+
+import { useContext } from 'react'
 import { Background } from './components/Background/Background'
 import { Information } from './components/Information/Information'
 import { Input } from './components/Input/Input'
 
+import { MapProvider } from '../src/services/map-context';
 
 function App() {
+
   return (
-    <div>
+    <MapProvider>
       <Background />
       <Input />
       <Information />
-    </div>
+    </MapProvider>
   )
 }
 
