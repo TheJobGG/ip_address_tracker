@@ -1,25 +1,29 @@
 import React from "react";
 import { useContext } from "react";
 
-
-
-
 import './Input.css';
 import { callAPI } from '../../services/ip-geolocation.js';
 import { updateUI } from '../../services/update-ui.js';
 import { MapContext } from '../../services/map-context';
+import { fetchData } from "../../services/ip-geolocation.js";
 
 export function Input() {
 
     const { lat, setLat, long, setLong, UpdateMap } = useContext(MapContext);
 
-    const onSubmit = (e) => {
+    const onSubmit = async(e) => {
         e.preventDefault();
         const ip = e.target.elements[0].value.trim();
 
         if (testIP(ip)) {
             const result = callAPI(ip);
-            console.log('data: ', data)
+            
+            try {
+                const result = await fetchData(API, ip);
+                console.log(result);
+            } catch (error) {
+                console.error(error)
+            }
 
             setLat(result.location.lat);
             setLong(result.location.lng);
