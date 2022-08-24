@@ -12,5 +12,5 @@ export async function searchByIp(ip) {
 }
 
 
-searchByIp('192.1.66.66')
+/* searchByIp('192.1.66.66') */
 // TODO: Buscar forma de ejecutar la solicitud en el navegador, o hacer la búsqueda para hacerla desde el backend
