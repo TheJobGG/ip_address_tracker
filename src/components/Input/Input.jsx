@@ -1,35 +1,38 @@
+// Input-jsx
+
 import React from "react";
 import { useContext } from "react";
 
 import './Input.css';
-import { callAPI } from '../../services/ip-geolocation.js';
+
 import { updateUI } from '../../services/update-ui.js';
 import { MapContext } from '../../services/map-context';
-import { fetchData } from "../../services/ip-geolocation.js";
+import { searchByIp } from "../../services/ip-geolocation.js";
 
 export function Input() {
 
-    const { lat, setLat, long, setLong, UpdateMap } = useContext(MapContext);
+    const {  setLat, setLong } = useContext(MapContext);
 
-    const onSubmit = async(e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         const ip = e.target.elements[0].value.trim();
 
         if (testIP(ip)) {
-            const result = callAPI(ip);
-            
+
+
             try {
-                const result = await fetchData(API, ip);
+                const result = await searchByIp(ip);
                 console.log(result);
+                
+                setLat(result.location.lat);
+                setLong(result.location.lng);
+                
+                setTimeout(() => {
+                    updateUI(result);
+                }, 100);
             } catch (error) {
                 console.error(error)
             }
-
-            setLat(result.location.lat);
-            setLong(result.location.lng);
-            setTimeout(() => {
-                updateUI(result);
-            }, 100);
         } else {
             return alert('Formato de IP no válido');
         }
