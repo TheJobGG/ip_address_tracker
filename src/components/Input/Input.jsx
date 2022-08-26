@@ -1,5 +1,3 @@
-// Input-jsx
-
 import React from "react";
 import axios from "axios";
 import { useContext } from "react";
@@ -17,7 +15,7 @@ export function Input() {
 
         if (testIP(ip)) {
             try {
-                const urlRequest = `http://localhost:3000/ip/${ip}`;
+                const urlRequest = `/ip/${ip}`;
                 
                 const dataIP = await axios.get(urlRequest)
                                 

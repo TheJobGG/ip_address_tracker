@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "front": "vite",
     "start": "node_modules\\.bin\\nodemon index.js",
     "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -25,9 +26,10 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
-    "gh-pages": "^4.0.0",
     "nodemon": "2.0.19",
     "vite": "^3.0.7"
   },
-  "homepage": "https://TheJobGG.github.io/ip_address_tracker"
+  "proxy": "http://localhost:3000"
+  
+
 }
