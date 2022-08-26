@@ -7,15 +7,15 @@
 			"config": {"includeFiles": ["./index.js"]}
 		},
         {
-            "src": "./dist/**",
+            "src": "./dist/index.html",
             "use": "@vercel/static",
-			"config": {"includeFiles": ["./dist/**"]}
+			"config": {"includeFiles": ["./dist/index.html"]}
         }
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "./dist/index.html"
+			"dest": "./"
 		},
 		{
 			"src": "/",
