@@ -8,6 +8,7 @@ import './Map.css';
 import { Pointer } from '../Pointer/Pointer';
 import { MapContext } from '../../services/map-context';
 
+
 export function Map() {
     const { lat, long, UpdateMap } = useContext(MapContext);
     const position = [lat, long];
@@ -19,9 +20,9 @@ export function Map() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 
             />
-            <Marker position={position}>
+            <Marker position={position} >
             </Marker>
-            <ZoomControl position="bottomright" zoomInText="+" zoomOutText="-" />
+            <ZoomControl position="bottomleft" zoomInText="+" zoomOutText="-" />
             <UpdateMap/>
         </MapContainer>
     );

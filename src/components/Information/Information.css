@@ -10,6 +10,15 @@
     z-index: 2;
 }
 
+#information > .data.location > p:nth-child(2){
+    font-size: var(--font-size);
+}
+
+#information > .data.location > p:last-child{
+    font-size: calc(var(--font-size) - 3px);
+}
+
+
 #information>.data >p:first-child {
     color: var(--dark-gray);
     text-transform: uppercase;
