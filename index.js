@@ -4,7 +4,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 const app = express();
 
-server.use(express.static(path.join(__dirname, './dist')));
+app.use(express.static('dist'))
 
 async function getByIp(ip) {
     const ipFetch = 'http://geo.ipify.org/api/v2/country,city?apiKey=at_b0jEA1f6p8fxadABpXz7zOZeTwGDO&ipAddress=' + ip;
