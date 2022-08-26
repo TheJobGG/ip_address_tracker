@@ -1,35 +1,44 @@
 // Input-jsx
 
 import React from "react";
+import axios from "axios";
 import { useContext } from "react";
 
 import './Input.css';
-
 import { updateUI } from '../../services/update-ui.js';
 import { MapContext } from '../../services/map-context';
-import { searchByIp } from "../../services/ip-geolocation.js";
 
 export function Input() {
-
-    const {  setLat, setLong } = useContext(MapContext);
+    const { setLat, setLong } = useContext(MapContext);
 
     const onSubmit = async (e) => {
         e.preventDefault();
         const ip = e.target.elements[0].value.trim();
 
         if (testIP(ip)) {
-
+            const options = {
+                'mode': 'no-cors',
+                'headers': {
+                    'Access-Control-Allow-Origin': '*',
+                }
+            };
 
             try {
-                const result = await searchByIp(ip);
-                console.log(result);
+                const urlRequest = `http://localhost:3000/ip/${ip}`;
+                /* const dataIP = await fetch(urlRequest, options) */
+                const dataIP = await axios.get(urlRequest)
+                    .then(response => console.log(response))
+                    .then(response => response.json(), options);
                 
-                setLat(result.location.lat);
+                console.log("URL del fetch: ", urlRequest);
+                console.log("Resultado de fetch: ", dataIP);
+
+                /* setLat(result.location.lat);
                 setLong(result.location.lng);
-                
+
                 setTimeout(() => {
                     updateUI(result);
-                }, 100);
+                }, 100); */
             } catch (error) {
                 console.error(error)
             }
