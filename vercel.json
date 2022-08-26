@@ -15,11 +15,11 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/"
+			"dest": "./dist/index.html"
 		},
 		{
 			"src": "/",
-			"dest": "./dist/index.html"
+			"dest": "/"
 		}
 	]
 }
