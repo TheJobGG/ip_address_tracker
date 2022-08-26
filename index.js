@@ -1,13 +1,10 @@
 import express from 'express';
+import cors from 'cors'
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const app = express();
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use(express.static('dist'))
 
 async function getByIp(ip) {
     const ipFetch = 'http://geo.ipify.org/api/v2/country,city?apiKey=at_b0jEA1f6p8fxadABpXz7zOZeTwGDO&ipAddress=' + ip;
@@ -17,11 +14,17 @@ async function getByIp(ip) {
     return body;
 }
 
-app.get('/ip/:ipAddress', async (request, response) => {
+app.get('/', async (request, response) => {
+    response.send('Home')
+});
+
+app.get('/ip/:ipAddress', cors() ,async (request, response) => {
     const ip = request.params.ipAddress;
     var resultado = await getByIp(ip);
     response.send(resultado);
 })
+
+
 
 const PORT = '3000'
 app.listen(PORT, () => {
