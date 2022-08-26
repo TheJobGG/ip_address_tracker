@@ -5,21 +5,12 @@
 			"src": "./index.js",
 			"use": "@vercel/node",
 			"config": {"includeFiles": ["./index.js"]}
-		},
-        {
-            "src": "./dist/index.html",
-            "use": "@vercel/static",
-			"config": {"includeFiles": ["./dist/index.html"]}
-        }
+		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
 			"dest": "./"
-		},
-		{
-			"src": "/",
-			"dest": "./dist/index.html"
 		}
 	]
 }
