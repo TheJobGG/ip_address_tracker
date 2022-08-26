@@ -6,12 +6,11 @@ import { useMapEvent } from "react-leaflet";
 const MapContext = createContext();
 
 function MapProvider(props) {
-    const [lat, setLat] = useState(34.04915);
-    const [long, setLong] = useState(-118.09462);
+    const [lat, setLat] = useState(39.04372);
+    const [long, setLong] = useState(-77.48749);
 
     function UpdateMap() {
         const map = useMapEvent('click', () => map.flyTo([lat, long]));
-        console.log('Método ejecutado');
     }
 
     return (

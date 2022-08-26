@@ -7,19 +7,20 @@ export function Information(){
         <div id="information">
             <div className="data ip">
                 <p>Ip address</p>
-                <p>192.212.174.101</p>
+                <p>66.10.4.1</p>
             </div>
             <div className="data location">
                 <p>Location</p>
-                <p>Brooklyn, NY 10001</p>
+                <p>Ashburn, Virginia</p>
+                <p>20146</p>
             </div>
             <div className="data timezone">
                 <p>Timezone</p>
-                <p>UTC - 05:00</p>
+                <p>UTC - 04:00</p>
             </div>
             <div className="data isp">
                 <p>ISP</p>
-                <p>SpaceX Starlink</p>
+                <p>AT&T Services, Inc.</p>
             </div>
         </div>
     );
