@@ -32,10 +32,6 @@ export function Input() {
                 const timeZone = dataIP.data.location.timezone;
                 const isp = dataIP.data.isp;
 
-                console.log(lat, long)
-                
-                console.log(dataIP)
-
                 setLat(lat);
                 setLong(long);
 
