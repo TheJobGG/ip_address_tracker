@@ -10,7 +10,7 @@ In this app 2 we are to request an ip and the app will use 2 APIs:
 With this we can show a location of any IP entered by the user
 
 Visit the page
-  👉 https://thejobgg.github.io/room-homepage/
+  👉 https://ip-address-tracker-thejobgg.vercel.app/
 
 
 ## Demo
